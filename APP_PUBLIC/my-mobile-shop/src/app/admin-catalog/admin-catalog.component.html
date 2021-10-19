@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <app-header [content]="pageContent.header"></app-header>
+  <table class="table table-hover mt-4">
+    <thead class="thead-dark">
+      <tr class="d-flex">
+        <th class="col-3" scope="col">Brand</th>
+        <th class="col-6" scope="col">Model</th>
+        <th class="col-3" scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="d-flex" *ngFor="let phone of phones">
+        <td class="col-3 d-flex align-items-center">
+          <span class="">{{phone.brand}}</span>
+        </td>
+        <td class="col-6 d-flex align-items-center">
+          <a routerLink="/phone/{{phone._id}}">{{phone.name}}</a>
+        </td>
+        <td class="col-3 d-flex align-items-center flex-nowrap">
+          <a routerLink="/edit-phone/{{phone._id}}" class="btn btn-info mr-2" role="button">Edit</a>
+          <button class="btn btn-danger" (click)="deletePhone(phone._id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="/new-phone" class="btn btn-dark" role="button">New Phone</a>
+</div>

@@ -1,0 +1,28 @@
+doctype html
+html.h-100
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+  body.d-flex.flex-column.h-100
+    nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
+      a.navbar-brand(href='/') My Mobile Shop
+      .collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href='/') Home
+          li.nav-item
+            a.nav-link(href='/list') Phone List
+          li.nav-item
+            a.nav-link(href='/about') About
+    main
+      block content
+    footer.footer.mt-auto.py-3
+      .container
+        small.text-muted Copyright &#9400; 2021&nbsp;
+          a.text-reset(href='mailto:rsantosduarte5970@conestogac.on.ca') Rafael Duarte
+          | . All rights reserved.
+  script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js' integrity='sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=' crossorigin='anonymous')
+  script.
+    window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\\/script>')
+  script(src='/javascripts/bootstrap.bundle.min.js')

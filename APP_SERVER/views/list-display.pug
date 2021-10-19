@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .container.py-4
+    h1 Our Mobile Phones
+    table.table.table-bordered.table-hover.table-striped.mt-4
+      thead
+      tr
+        th() Brand
+        th() Model
+      tbody
+        each phone in phones
+          tr
+            td=phone.brand
+            td
+              a(href=`/phone/${phone._id}`) #{phone.name}
+    a.btn.btn-primary(href='/new' role='button') New Phone

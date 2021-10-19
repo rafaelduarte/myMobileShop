@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  .container.py-4
+    h1 #{currentPhone.brand} #{currentPhone.name}
+    .row
+      .col-8
+        table.table.table-bordered.table-hover.table-striped.mt-4
+          tbody
+            tr
+              th(scope='row' class='text-nowrap') Model Name
+              td=currentPhone.name
+            tr
+              th(scope='row') Brand
+              td=currentPhone.brand
+            tr
+              th(scope='row') Description
+              td=currentPhone.description
+            tr
+              th(scope='row') Price
+              td=currentPhone.price
+            tr
+              th(scope='row') Specs
+              td
+                .row
+                  .col-3
+                    strong CPU
+                  .col=currentPhone.specs.cpu
+                .row
+                  .col-3.text-nowrap
+                    strong RAM Size
+                  .col=currentPhone.specs.ramSize
+                .row
+                  .col-3
+                    strong Storage
+                  .col=currentPhone.specs.storage
+            tr
+              th(scope='row') Rating
+              td=currentPhone.rating
+            tr
+              th(scope='row') Available
+              td=currentPhone.available
+        a.btn.btn-primary(href='/list' role='button') Back to List
+      .col
