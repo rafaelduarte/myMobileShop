@@ -1,2 +1,2 @@
 # myMobileShop
-Mobile phones store based on MEAN Stack
+Mobile phones web store based on MEAN Stack
