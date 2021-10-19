@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
-const dbURI =
-  'mongodb+srv://mymobileshop:mymobileshoppwd@cluster0.gmtpg.mongodb.net/mobileShopDB?retryWrites=true&w=majority';
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+const dbURI = process.env.DB_URI;
 
 mongoose.connect(dbURI, {
   useNewUrlParser: true,
