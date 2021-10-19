@@ -1,0 +1,52 @@
+extends layout
+
+block content
+  .container.py-4
+    h1=title
+    .row.mt-4
+      .col-6
+        form(action='' method='post')
+          .form-group
+            label(for='name') Model Name
+            input#name.form-control(type='text' name='name' required)
+          .form-group
+            label(for='brand') Brand
+            input#brand.form-control(type='text' name='brand' required)
+          .form-group
+            label(for='price') Price
+            input#price.form-control(type='number' name='price' min='0' step='.01' required)
+          .form-group
+            label(for='description') Description
+            textarea#description.form-control(name='description' rows='3')
+          .form-group
+            label(for='cpu') CPU
+            input#cpu.form-control(type='text' name='cpu' required)
+          .form-group
+            label(for='ramSize') RAM Size
+            input#ramSize.form-control(type='text' name='ramSize')
+          .form-group
+            label(for='storage') Storage
+            input#storage.form-control(type='text' name='storage' required)
+          .form-group
+            label(for='rating') Rating
+            input#rating.form-control(type='number' name='rating' min='0' max='5' step='.1')
+          .form-group
+            label(for='available') Available?
+            .form-check.ml-4
+              input#available-yes.form-check-input(type='radio' name='available' value='true' checked)
+              label.form-check-label(for='available-yes') Yes
+            .form-check.ml-4
+              input#available-no.form-check-input(type='radio' name='available' value='false')
+              label.form-check-label(for='available-yes') No
+          input.mt-4.btn.btn-primary(type='submit' value='Submit')
+
+      //- label(for='name')
+      //-   | Name:&nbsp;
+      //-   input#name(type='text' name='name')
+      //- br
+      //- label(for='brand')
+      //-   | Brand:&nbsp;
+      //-   input#brand(type='text' name='brand')
+      //- br
+      //- br
+      //- input(type='submit' value='Submit')

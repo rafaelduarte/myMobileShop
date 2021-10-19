@@ -1,0 +1,31 @@
+.jumbotron {
+  background-image: url('../../assets/homepage-hero.png');
+  background-size: cover;
+  background-position: center;
+  padding: 10rem 2rem;
+}
+
+.catalog {
+  background-image: url('../../assets/catalog.png');
+  background-size: cover;
+  cursor: pointer;
+}
+
+.about-us {
+  background-image: url('../../assets/about-us.png');
+  background-size: cover;
+  cursor: pointer;
+}
+
+.flex-equal > * {
+  -ms-flex: 1;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+.overflow-hidden { overflow: hidden; }

@@ -1,0 +1,12 @@
+.phone {
+  cursor: pointer;
+}
+
+.card {
+  align-items: center;
+}
+
+.card img {
+  height: 20rem;
+  margin-top: 1rem;
+}
